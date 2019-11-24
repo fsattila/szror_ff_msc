@@ -1,4 +1,6 @@
 
+key/
+
 # Created by https://www.gitignore.io/api/node,macos,windows,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=node,macos,windows,visualstudiocode
 
@@ -95,10 +97,6 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
-.env
-.env.test
-
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
@@ -107,9 +105,6 @@ typings/
 
 # nuxt.js build output
 .nuxt
-
-# react / gatsby 
-public/
 
 # vuepress build output
 .vuepress/dist
