@@ -1,0 +1,109 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>GCP STT to MQTT</title>
+    <meta name="description" content="Google Cloud Platform Speech-to-Text to MQTT">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <audio></audio>
+    <div class="container">
+        <div class="row">
+            <div class="col-100">
+                <h1> GCP Speech-to-Text to MQTT </h1>
+            </div>
+        </div>
+        <div class="GCP">
+            <div class="row">
+                <div class="col-100">
+                    <input type="button" id="startRecButton" value="Start">
+                    <input type="button" id="stopRecButton" value="Stop">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-100">
+                    <select id="languageCode">
+                        <option value="hu-HU">hu-HU</option>
+                        <option value="en-US">en-US</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-100">
+                    <p class="result-text" id="ResultText">No Speech to Text yet</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-100">
+                <h2> MQTT connection </h2>
+            </div>
+        </div>
+        <form class="MQTT">
+            <div class="row">
+                <div class="col-25">
+                    <label for="mqtt_broker_ip">MQTT Broker IP: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="mqtt_broker_ip" id="mqtt_broker_ip" placeholder="192.168.0.1"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="mqtt_topic">MQTT Topic: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="mqtt_topic" id="mqtt_topic" placeholder="Topic"/>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-100">
+                    <input type="button" id="connectmqttButton" value="Connect">
+                    <input type="button" id="disconnectmqttButton" value="Disconnect">
+                </div>
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="col-25">
+                    <label for="mqtt_current_ip">MQTT Broker IP: </label>
+                </div>
+                <div class="col-75">
+                    <output id="mqtt_current_ip"></output>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="mqtt_current_topic">MQTT Topic: </label> 
+                </div>
+                <div class="col-75">
+                    <output id="mqtt_current_topic"></output>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="mqtt_current_status">MQTT Client status: </label>
+                </div>
+                <div class="col-75">
+                    <output id="mqtt_current_status">Disconnected</output>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Socket -->
+    <script src="assets/js/socket.io.js"></script>
+
+    <!-- Client -->
+    <script src="assets/js/client.js"></script>
+</body>
+
+</html>
