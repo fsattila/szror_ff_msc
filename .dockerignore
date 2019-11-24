@@ -1,0 +1,7 @@
+.devcontainer
+.vscode
+node_modules
+.git*
+yarn.lock
+.env
+key/*
