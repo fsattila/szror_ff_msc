@@ -91,7 +91,6 @@ io.on('connection', function (client) {
     });
     function publishmqtt(data){
         mqtt_client.publish(mqtt_topic, data)
-        logger.info("Teszt count")
         //For testing read the publishd message
         //mqtt://test.mosquitto.org
         //presence
